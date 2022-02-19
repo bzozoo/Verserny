@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/createTodo.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/todo.css">
+  <link rel="stylesheet" href="css/questionMark.css">
+  <link rel="stylesheet" href="css/pendingAndDone.css">
+  <link rel="stylesheet" href="css/editTodo.css">
+  <link rel="stylesheet" href="css/voice-active.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/deadline.css">
+  <link rel="stylesheet" href="css/infoPopUp.css">
+  <title>ToDo</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo"></div>
+    </header>
+    <main>
+      <form class="form-todo" novalidate>
+        <button type="button" id="create-todo-voice-btn" class="btn-voice">
+          <img src="images/mic.svg" alt="microphone" class="input-icon mic">
+        </button>
+        <input type="text" name="todoText" class="todo-text-input" autocomplete="off" maxlength="100" required>
+        <div class="calendar-wrapper">
+          <input class="date-time-input" type="datetime-local" name="dateTime">
+          <img src="images/calendar.svg" alt="calendar" class="input-icon">
+        </div>
+        <button class="create-todo-icon">
+          <img src="images/add.svg" alt="plus" class="input-icon">
+        </button>
+      </form>
+      <div class="status">
+        <button id="status-pending" class="left-rounder btn-status  active">Folyamatban</button>
+        <button id="status-completed" class="right-rounder btn-status ">Kész</button>
+      </div>
+      <div class="todo-container">
+    </main>
+    <div class="box">
+      <a id="help" class="button help close" href="#">?</a>
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <ul class="info-popup-list">
+            <li>A mikrofon ikon segítségével, akár diktálhatod is a teendődet.</li>
+            <li>A naptár ikon használatával pontos dátumot határozhatsz meg az elintéznivalódnak.</li>
+            <li>A plusz ikon-ra kattintva pedig, hozzá adhatod a tennivalódat, a listádhoz.</li>
+            <li>A "Folyamatban" gomb segítségével listázhatod, az aktív tennivalóid listáját.</li>
+            <li>A "Kész" gombbal pedig, a már kész tennivalóid listájához jutsz hozzá.</li>
+            <li>Tennivaló szerkeztéséhez kattints a bal oldalon található "..." gombokra.</li>
+            <li>Kész gombra kattintva jelezheted, hogy elvégezted a teendődet.</li>
+            <li>Szerkeztés gombra kattintva az aktuális tennivalód szerkeztheted.</li>
+            <li>Törlést követően a visszavonás gombra kattintva megakadályozhatod a tennivaló törlését,
+              különbenvéglegesen törlésre kerül.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

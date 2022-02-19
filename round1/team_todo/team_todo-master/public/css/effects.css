@@ -1,0 +1,52 @@
+.todo span {
+  display: none;
+  position: absolute;
+  width: 100px;
+  color: #fff;
+  left: calc(50% - 50px);
+  z-index: 2;
+}
+
+.undo {
+  cursor: pointer;
+}
+
+.todo::before {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  height: 100%;
+  content: "";
+}
+
+.todo::after {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  content: "";
+}
+
+.undo.todo span {
+  display: inline;
+  user-select: none;
+}
+
+.undo.todo::after,
+.todo.undo::before {
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-name: load;
+  background-color: #253965;
+  width: 50%;
+}
+
+@keyframes load {
+  0% {
+    width: 40px;
+  }
+
+  100% {
+    width: calc(50% );
+  }
+}

@@ -1,0 +1,9 @@
+.deadline {
+  font-size: 10px;
+  position: absolute;
+  bottom: 3px;
+  right: 50px;
+  display: inline-block;
+  user-select: none;
+  color: #679ab5;
+}

@@ -1,0 +1,28 @@
+.voice-active {
+  position: relative;
+  z-index: 20;
+}
+.voice-active:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 2px solid #c00a0a;
+  position: absolute;
+  z-index: 10;
+  left: calc(50% -5px);
+  top: calc(50% -5px);
+  animation: ring 1.2s infinite;
+}
+
+@keyframes ring {
+  0% {
+    height: 5px;
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4, 4);
+    opacity: 0;
+  }
+}
