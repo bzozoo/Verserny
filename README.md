@@ -1,5 +1,5 @@
 # Verserny
-Kódolóverseny repo
+Kódolóverseny repo-k
 
 # ROUND 1
 
