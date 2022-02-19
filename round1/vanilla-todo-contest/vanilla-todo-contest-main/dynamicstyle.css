@@ -1,0 +1,58 @@
+.fallback {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.TDAFallbackOn {
+  overflow-y: hidden;
+}
+
+.TDAnewEventError {
+  color: red;
+  font-size: 16px;
+  background-color: white;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.newEventName input {
+  width: 220px;
+  font-size: 1rem;
+  padding: 5px;
+}
+.newEventName input:focus,
+.newEventDetails textarea:focus {
+  border: 1px solid #46bd4a;
+}
+
+.newEvenDate input {
+  width: 220px;
+  font-size: 1rem;
+}
+
+.InLePa :nth-child(2) {
+  margin-top: 5px;
+}
+.newEventDetails textarea {
+  font-family: Roboto, sans-serif;
+  width: 220px;
+  height: 100px;
+  font-size: 1rem;
+  padding: 5px;
+  resize: none;
+}
+
+.TDAnewEventSuccess {
+  color: #46bd4a;
+  font-size: 16px;
+  background-color: white;
+  text-align: center;
+  margin: 0 10px;
+}

@@ -1,0 +1,159 @@
+﻿<script src="js/functions.js"></script>
+<script src="js/events.js"></script>
+<script>
+
+
+//localStorage.removeItem('todoList');
+
+
+
+
+
+//evt	=	searchEvent("1643549400000");
+
+
+
+events	=	getEvents();
+
+
+
+
+
+
+
+
+
+
+//"1577971800000"
+
+/*
+event	=	createEvent(
+
+	{	date		:	"2020-01-02 14:30",	
+		title		:	"Event 2",
+		description	:	"Sample"
+	}
+
+);
+
+
+console.log(event);
+*/
+
+evt	=	modifyEvent({eventId:"1577971800000",type:"active",value:false});
+console.log(evt);
+
+
+
+*/
+
+
+
+
+
+
+
+//console.log(event);
+
+/*
+event	=	createEvent(
+
+	{	date		:	"2020-01-01 14:30",	
+		title		:	"Event 2",
+		description	:	"Sample"
+	}
+
+);
+//console.log(event);
+
+
+event	=	createEvent(
+
+	{	date		:	"2019-01-01 14:30",	
+		title		:	"Event 2",
+		description	:	"Sample"
+	}
+
+);
+//console.log(event);
+
+
+event	=	createEvent(
+
+	{	date		:	"2020-01-07 14:35aa",	
+		title		:	"1",
+		description	:	"Samp"
+	}
+
+);
+
+
+//console.log(event);
+
+*/
+
+
+/*
+
+
+event	=	createEvent(
+
+	{	date		:	"2018-01-01 14:30",	
+		title		:	"Event X",
+		description	:	"Sample"
+	}
+
+);
+*/
+//console.log(event);
+
+
+
+
+
+
+//event	=	modifyEvent({eventId:1577885400000,type:"date",value:"2017-01-01 14:34"});
+//event	=	modifyEvent({eventId:1577885400000,type:"title",value:"Event Y"});
+//event	=	modifyEvent({eventId:1577885400000,type:"description",value:"2017-01-01 14:34"});
+//event	=	modifyEvent({eventId:1577885400000,type:"active",value:false});
+//event	=	modifyEvent({eventId:1577885400000,type:"random",value:true});
+//console.log(event);
+
+
+
+/*
+console.log("Az eseménytároló elemei:");
+console.log(todoList.events);
+
+console.log("*****");
+
+
+*/
+
+
+filterEvents(	{searchWord:"event",	eventStatus:false}	);
+//console.log(result);
+
+cal	=	calendar();
+//console.log(cal);
+
+function calendar(){
+
+	obj	=	{};
+	
+	todoList.events.forEach(
+		function(val){
+		
+			if(typeof obj[val.date.split(" ")[0]]	==	"undefined"){	obj[val.date.split(" ")[0]]	=	0;}
+			obj[val.date.split(" ")[0]]++;
+			
+		//	console.log(val.date.split(" ")[0]);
+			
+		}
+
+	);
+return obj;
+}
+
+
+</script>
