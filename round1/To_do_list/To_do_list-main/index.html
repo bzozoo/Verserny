@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    rel="icon"
+    href="https://image.freepik.com/free-icon/todo-list_318-10185.jpg"
+  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <!--  <header>
+
+      <h1 id="Title">To Do List</h1> 
+    </header> -->
+
+    <!-- dizájn körök -->
+    <div class="blackred"></div>
+    <div class="redblack"></div>
+    <div class="blue"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="yellow"></div>
+
+    <main>
+      <div id="container">
+        <p></p>
+        <!--ide írjuk majd az angol felhasználási utasítást-->
+
+        <input type="textarea" id="input" /><button id="add">Add Task</button>
+        <!--ide írja be a felhasználó a lista elemeit-->
+      </div>
+      <div class="tasks">
+        <div id="todolist">
+          <h1 class="unfinished">Unfinished</h1>
+          <!--itt jelennek meg a lista elemei-->
+          <ul id="main-list">
+            <!--A template nem renderelődik csak a JS-ben használom ujra -->
+            <template id="task-template">
+              <li class="task1">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="task-checkbox"
+                    name="task1"
+                    value=""
+                  />
+                  <!-- id task1 -> class task-checkbox : így ha több task van nem lesz konfliktálódás-->
+                  <h1 class="task-text">Task</h1>
+                  <i class="glyphicon glyphicon-remove"></i>
+                  <button id="editbutton">
+                    <i class="material-icons" id="edit">border_color</i>
+                  </button>
+                  <button id="confirm" style="display: none">
+                    <span class="material-icons" id="confirm"> done </span>
+                  </button>
+                  <button id="deletebutton">
+                    <i class="material-icons">delete</i>
+                  </button>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </div>
+
+        <div id="todolistfinished">
+          <!--   h2 esek atirasa h1 re   majd,  megtortent, csak egy helyen nem, a 61. sorban !!!   -->
+          <h1 class="finished">Finished</h1>
+          <!--itt jelennek meg az elvégzett lista elemek-->
+          <ul id="finished-list"></ul>
+        </div>
+      </div>
+      <div id="task-counter">
+        <!--itt <h1 id="numberoftasks">Number of Tasks to do</h1> -->
+        <h1 id="count"></h1>
+      </div>
+    </main>
+
+    <footer>
+      <!--logo-->
+    </footer>
+  </body>
+</html>
