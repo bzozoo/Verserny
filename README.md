@@ -1,0 +1,2 @@
+# Verserny
+Kódolóverseny repo
